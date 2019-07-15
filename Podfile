@@ -7,7 +7,8 @@ target 'BestSwiftRepo' do
 
   # Pods for BestSwiftRepo
     pod 'Alamofire'
-
+    pod 'JGProgressHUD'
+    
   target 'BestSwiftRepoTests' do
     inherit! :search_paths
     # Pods for testing
