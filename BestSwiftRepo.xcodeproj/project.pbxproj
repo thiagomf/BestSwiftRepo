@@ -3,19 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2C99EDDD8628851AEB83CA49 /* Pods_BestSwiftRepoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A7B318CEE6A54FB18EABF5 /* Pods_BestSwiftRepoTests.framework */; };
 		48984A17F9570F3960E2A2D9 /* Pods_BestSwiftRepo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3988FC8440DF73CBC803ADBB /* Pods_BestSwiftRepo.framework */; };
 		86801A0922DD2F5000739E54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86801A0822DD2F5000739E54 /* AppDelegate.swift */; };
-		86801A0B22DD2F5000739E54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86801A0A22DD2F5000739E54 /* ViewController.swift */; };
-		86801A0E22DD2F5000739E54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86801A0C22DD2F5000739E54 /* Main.storyboard */; };
+		86801A0B22DD2F5000739E54 /* RepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86801A0A22DD2F5000739E54 /* RepoViewController.swift */; };
 		86801A1022DD2F5200739E54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86801A0F22DD2F5200739E54 /* Assets.xcassets */; };
 		86801A1322DD2F5200739E54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86801A1122DD2F5200739E54 /* LaunchScreen.storyboard */; };
 		86801A1E22DD2F5200739E54 /* BestSwiftRepoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86801A1D22DD2F5200739E54 /* BestSwiftRepoTests.swift */; };
 		86801A2922DD2F5200739E54 /* BestSwiftRepoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86801A2822DD2F5200739E54 /* BestSwiftRepoUITests.swift */; };
+		86801A4222DD392200739E54 /* Repositories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86801A4122DD392200739E54 /* Repositories.storyboard */; };
+		86801A4422DD3DC300739E54 /* RepoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86801A4322DD3DC300739E54 /* RepoProtocols.swift */; };
+		86801A4922DD3EDF00739E54 /* CustomRepoType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86801A4822DD3EDF00739E54 /* CustomRepoType.swift */; };
+		86801A4E22DD419500739E54 /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86801A4D22DD419500739E54 /* Repositories.swift */; };
+		86801A5022DD41CF00739E54 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86801A4F22DD41CF00739E54 /* Item.swift */; };
+		86801A5222DD430A00739E54 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86801A5122DD430A00739E54 /* Owner.swift */; };
 		D6F3E17230C04E52D2158C52 /* Pods_BestSwiftRepoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E844A63E67D675B375666A4C /* Pods_BestSwiftRepoUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,8 +48,7 @@
 		3B830594EB98FDC2C967C835 /* Pods-BestSwiftRepoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestSwiftRepoUITests.debug.xcconfig"; path = "Target Support Files/Pods-BestSwiftRepoUITests/Pods-BestSwiftRepoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		86801A0522DD2F5000739E54 /* BestSwiftRepo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestSwiftRepo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86801A0822DD2F5000739E54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		86801A0A22DD2F5000739E54 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		86801A0D22DD2F5000739E54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		86801A0A22DD2F5000739E54 /* RepoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewController.swift; sourceTree = "<group>"; };
 		86801A0F22DD2F5200739E54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86801A1222DD2F5200739E54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86801A1422DD2F5200739E54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +58,12 @@
 		86801A2422DD2F5200739E54 /* BestSwiftRepoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BestSwiftRepoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86801A2822DD2F5200739E54 /* BestSwiftRepoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestSwiftRepoUITests.swift; sourceTree = "<group>"; };
 		86801A2A22DD2F5200739E54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86801A4122DD392200739E54 /* Repositories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Repositories.storyboard; sourceTree = "<group>"; };
+		86801A4322DD3DC300739E54 /* RepoProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoProtocols.swift; sourceTree = "<group>"; };
+		86801A4822DD3EDF00739E54 /* CustomRepoType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRepoType.swift; sourceTree = "<group>"; };
+		86801A4D22DD419500739E54 /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
+		86801A4F22DD41CF00739E54 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		86801A5122DD430A00739E54 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		99F2519E4C2B212BD017CEFD /* Pods-BestSwiftRepoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestSwiftRepoTests.debug.xcconfig"; path = "Target Support Files/Pods-BestSwiftRepoTests/Pods-BestSwiftRepoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A6A7B318CEE6A54FB18EABF5 /* Pods_BestSwiftRepoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BestSwiftRepoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE7398CE25A1A84C71211B45 /* Pods-BestSwiftRepoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestSwiftRepoUITests.release.xcconfig"; path = "Target Support Files/Pods-BestSwiftRepoUITests/Pods-BestSwiftRepoUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -109,7 +119,6 @@
 				3B830594EB98FDC2C967C835 /* Pods-BestSwiftRepoUITests.debug.xcconfig */,
 				BE7398CE25A1A84C71211B45 /* Pods-BestSwiftRepoUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -138,12 +147,12 @@
 		86801A0722DD2F5000739E54 /* BestSwiftRepo */ = {
 			isa = PBXGroup;
 			children = (
-				86801A0822DD2F5000739E54 /* AppDelegate.swift */,
-				86801A0A22DD2F5000739E54 /* ViewController.swift */,
-				86801A0C22DD2F5000739E54 /* Main.storyboard */,
-				86801A0F22DD2F5200739E54 /* Assets.xcassets */,
-				86801A1122DD2F5200739E54 /* LaunchScreen.storyboard */,
-				86801A1422DD2F5200739E54 /* Info.plist */,
+				86801A3622DD360500739E54 /* Application */,
+				86801A3822DD364100739E54 /* Modules */,
+				86801A3A22DD365D00739E54 /* Network */,
+				86801A3922DD364900739E54 /* Protocols */,
+				86801A3722DD362B00739E54 /* Resources */,
+				86801A4622DD3E6000739E54 /* Util */,
 			);
 			path = BestSwiftRepo;
 			sourceTree = "<group>";
@@ -164,6 +173,115 @@
 				86801A2A22DD2F5200739E54 /* Info.plist */,
 			);
 			path = BestSwiftRepoUITests;
+			sourceTree = "<group>";
+		};
+		86801A3622DD360500739E54 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				86801A0822DD2F5000739E54 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		86801A3722DD362B00739E54 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				86801A0F22DD2F5200739E54 /* Assets.xcassets */,
+				86801A1122DD2F5200739E54 /* LaunchScreen.storyboard */,
+				86801A1422DD2F5200739E54 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		86801A3822DD364100739E54 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				86801A3B22DD368800739E54 /* Repositories */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		86801A3922DD364900739E54 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				86801A4322DD3DC300739E54 /* RepoProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		86801A3A22DD365D00739E54 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		86801A3B22DD368800739E54 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				86801A4A22DD40ED00739E54 /* Entity */,
+				86801A3F22DD36F900739E54 /* Router */,
+				86801A3E22DD36D900739E54 /* Interactor */,
+				86801A3D22DD36D300739E54 /* Presenter */,
+				86801A3C22DD36CC00739E54 /* View */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		86801A3C22DD36CC00739E54 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				86801A0A22DD2F5000739E54 /* RepoViewController.swift */,
+				86801A4122DD392200739E54 /* Repositories.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		86801A3D22DD36D300739E54 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		86801A3E22DD36D900739E54 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		86801A3F22DD36F900739E54 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		86801A4622DD3E6000739E54 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				86801A4722DD3EB300739E54 /* Enum */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		86801A4722DD3EB300739E54 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				86801A4822DD3EDF00739E54 /* CustomRepoType.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		86801A4A22DD40ED00739E54 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				86801A4D22DD419500739E54 /* Repositories.swift */,
+				86801A4F22DD41CF00739E54 /* Item.swift */,
+				86801A5122DD430A00739E54 /* Owner.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,8 +393,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				86801A1322DD2F5200739E54 /* LaunchScreen.storyboard in Resources */,
+				86801A4222DD392200739E54 /* Repositories.storyboard in Resources */,
 				86801A1022DD2F5200739E54 /* Assets.xcassets in Resources */,
-				86801A0E22DD2F5000739E54 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,7 +505,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86801A0B22DD2F5000739E54 /* ViewController.swift in Sources */,
+				86801A4422DD3DC300739E54 /* RepoProtocols.swift in Sources */,
+				86801A4E22DD419500739E54 /* Repositories.swift in Sources */,
+				86801A5222DD430A00739E54 /* Owner.swift in Sources */,
+				86801A0B22DD2F5000739E54 /* RepoViewController.swift in Sources */,
+				86801A4922DD3EDF00739E54 /* CustomRepoType.swift in Sources */,
+				86801A5022DD41CF00739E54 /* Item.swift in Sources */,
 				86801A0922DD2F5000739E54 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,14 +547,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		86801A0C22DD2F5000739E54 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				86801A0D22DD2F5000739E54 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		86801A1122DD2F5200739E54 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -566,7 +681,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A62T4XMM89;
-				INFOPLIST_FILE = BestSwiftRepo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BestSwiftRepo/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -585,7 +700,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A62T4XMM89;
-				INFOPLIST_FILE = BestSwiftRepo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BestSwiftRepo/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

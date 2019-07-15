@@ -8,14 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class RepoViewController: UIViewController {
 
+    @IBOutlet weak var repoTbv: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         print("teste")
     }
-
-
 }
 
