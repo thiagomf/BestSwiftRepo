@@ -45,11 +45,14 @@ class RepoViewController: UIViewController {
     
     func configureTbv(itens: [Item]) {
         
+        customElements = []
+        
         for item in itens {
             customElements.append(RepoElement.init(item: item))
         }
         
         repoTbv.register(RepoViewCell.self, forCellReuseIdentifier: CustomRepoType.dataCell.rawValue)
+        repoTbv.register(LoadViewCell.self, forCellReuseIdentifier: CustomRepoType.loadCell.rawValue)
         
         repoTbv.rowHeight = UITableView.automaticDimension
         repoTbv.estimatedRowHeight = 50
@@ -59,18 +62,39 @@ class RepoViewController: UIViewController {
 
 extension RepoViewController: UITableViewDataSource {
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return customElements.count
+        if section == 0 {
+            return customElements.count
+        } else if section == 1 && fetchingMore {
+            return 1
+        }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellModel = customElements[indexPath.row]
-        let cellIdentifier = cellModel.type.rawValue
-        let customCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! CustomRepoElementCell
-        
-        customCell.configure(withModel: cellModel)
-        
-        return customCell as! UITableViewCell
+        if indexPath.section == 0 {
+            
+            let cellModel = customElements[indexPath.row]
+            let cellIdentifier = cellModel.type.rawValue
+            let customCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! CustomRepoElementCell
+            
+            customCell.configure(withModel: cellModel)
+            
+            return customCell as! UITableViewCell
+        } else {
+            
+            let cellModel = LoadElement.init()
+            let cellIdentifier = cellModel.type.rawValue
+            let customCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! CustomRepoElementCell
+            
+            customCell.configure(withModel: cellModel)
+            
+            return customCell as! UITableViewCell
+        }
     }
 }
 
@@ -85,7 +109,6 @@ extension RepoViewController: UITableViewDelegate {
             if fetchingMore {
                 fetchingMore = false
                 presenter?.callRepoItens()
-                print("testeScroll")
             }
         }
     }

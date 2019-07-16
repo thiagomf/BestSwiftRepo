@@ -23,7 +23,6 @@ class LoadViewCell: UITableViewCell, CustomRepoElementCell {
     
     private let loadProgress: UIActivityIndicatorView = {
         let loadP = UIActivityIndicatorView(style: .gray)
-        loadP.startAnimating()
         return loadP
     }()
     
@@ -57,6 +56,7 @@ class LoadViewCell: UITableViewCell, CustomRepoElementCell {
         }
         
         self.model = model
+        loadProgress.startAnimating()
     }
 
 }

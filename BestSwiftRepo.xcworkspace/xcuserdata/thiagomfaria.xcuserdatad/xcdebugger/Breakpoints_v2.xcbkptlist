@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BestSwiftRepo/Modules/Repositories/Interactor/RepoInteractor.swift"
-            timestampString = "584994855.1087821"
+            timestampString = "584998286.752324"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BestSwiftRepo/Network/RepoAPIService.swift"
-            timestampString = "584989884.924803"
+            timestampString = "584998286.760392"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "19"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BestSwiftRepo/Network/RepoAPIService.swift"
-            timestampString = "584989884.9252729"
+            timestampString = "584998286.762105"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BestSwiftRepo/Network/RepoAPIService.swift"
-            timestampString = "584989884.92545"
+            timestampString = "584998286.762787"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
@@ -90,11 +90,75 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BestSwiftRepo/Modules/Repositories/Interactor/RepoInteractor.swift"
-            timestampString = "584994855.109283"
+            timestampString = "584998286.76334"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
             endingLineNumber = "29"
+            landmarkName = "sucessItens(repo:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BestSwiftRepo/Network/RepoAPIService.swift"
+            timestampString = "584998286.763929"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "callAPIItensRepo(page:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BestSwiftRepo.RepoAPIService.callAPIItensRepo(page: Swift.Int) -&gt; ()"
+                  moduleName = "BestSwiftRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/thiagomfaria/BestSwiftRepo/BestSwiftRepo/Network/RepoAPIService.swift"
+                  timestampString = "584998104.6928591"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;BestSwiftRepo.Repositories&gt;) -&gt; () in BestSwiftRepo.RepoAPIService.callAPIItensRepo(page: Swift.Int) -&gt; ()"
+                  moduleName = "BestSwiftRepo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/thiagomfaria/BestSwiftRepo/BestSwiftRepo/Network/RepoAPIService.swift"
+                  timestampString = "584998104.696472"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "168">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BestSwiftRepo/Modules/Repositories/Interactor/RepoInteractor.swift"
+            timestampString = "584998286.764377"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "sucessItens(repo:)"
             landmarkType = "7">
          </BreakpointContent>
