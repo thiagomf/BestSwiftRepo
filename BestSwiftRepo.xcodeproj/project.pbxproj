@@ -21,6 +21,11 @@
 		86801A4E22DD419500739E54 /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86801A4D22DD419500739E54 /* Repositories.swift */; };
 		86801A5022DD41CF00739E54 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86801A4F22DD41CF00739E54 /* Item.swift */; };
 		86801A5222DD430A00739E54 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86801A5122DD430A00739E54 /* Owner.swift */; };
+		86801A5422DD484600739E54 /* RepoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86801A5322DD484600739E54 /* RepoPresenter.swift */; };
+		86801A5622DD48BA00739E54 /* RepoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86801A5522DD48BA00739E54 /* RepoInteractor.swift */; };
+		86801A5822DD495800739E54 /* RepoAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86801A5722DD495700739E54 /* RepoAPIService.swift */; };
+		86801A5A22DD4A1C00739E54 /* RepoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86801A5922DD4A1C00739E54 /* RepoRouter.swift */; };
+		86801A5C22DD4A7100739E54 /* StoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86801A5B22DD4A7100739E54 /* StoryBoard.swift */; };
 		D6F3E17230C04E52D2158C52 /* Pods_BestSwiftRepoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E844A63E67D675B375666A4C /* Pods_BestSwiftRepoUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +69,11 @@
 		86801A4D22DD419500739E54 /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
 		86801A4F22DD41CF00739E54 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		86801A5122DD430A00739E54 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		86801A5322DD484600739E54 /* RepoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoPresenter.swift; sourceTree = "<group>"; };
+		86801A5522DD48BA00739E54 /* RepoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoInteractor.swift; sourceTree = "<group>"; };
+		86801A5722DD495700739E54 /* RepoAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoAPIService.swift; sourceTree = "<group>"; };
+		86801A5922DD4A1C00739E54 /* RepoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoRouter.swift; sourceTree = "<group>"; };
+		86801A5B22DD4A7100739E54 /* StoryBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoard.swift; sourceTree = "<group>"; };
 		99F2519E4C2B212BD017CEFD /* Pods-BestSwiftRepoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestSwiftRepoTests.debug.xcconfig"; path = "Target Support Files/Pods-BestSwiftRepoTests/Pods-BestSwiftRepoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A6A7B318CEE6A54FB18EABF5 /* Pods_BestSwiftRepoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BestSwiftRepoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE7398CE25A1A84C71211B45 /* Pods-BestSwiftRepoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestSwiftRepoUITests.release.xcconfig"; path = "Target Support Files/Pods-BestSwiftRepoUITests/Pods-BestSwiftRepoUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -212,6 +222,7 @@
 		86801A3A22DD365D00739E54 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				86801A5722DD495700739E54 /* RepoAPIService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -231,6 +242,7 @@
 		86801A3C22DD36CC00739E54 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				86801A5D22DD4C1900739E54 /* Cells */,
 				86801A0A22DD2F5000739E54 /* RepoViewController.swift */,
 				86801A4122DD392200739E54 /* Repositories.storyboard */,
 			);
@@ -240,6 +252,7 @@
 		86801A3D22DD36D300739E54 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				86801A5322DD484600739E54 /* RepoPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -247,6 +260,7 @@
 		86801A3E22DD36D900739E54 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				86801A5522DD48BA00739E54 /* RepoInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -254,6 +268,7 @@
 		86801A3F22DD36F900739E54 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				86801A5922DD4A1C00739E54 /* RepoRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -262,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				86801A4722DD3EB300739E54 /* Enum */,
+				86801A5B22DD4A7100739E54 /* StoryBoard.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -282,6 +298,13 @@
 				86801A5122DD430A00739E54 /* Owner.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		86801A5D22DD4C1900739E54 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -509,7 +532,12 @@
 				86801A4E22DD419500739E54 /* Repositories.swift in Sources */,
 				86801A5222DD430A00739E54 /* Owner.swift in Sources */,
 				86801A0B22DD2F5000739E54 /* RepoViewController.swift in Sources */,
+				86801A5C22DD4A7100739E54 /* StoryBoard.swift in Sources */,
+				86801A5A22DD4A1C00739E54 /* RepoRouter.swift in Sources */,
+				86801A5822DD495800739E54 /* RepoAPIService.swift in Sources */,
+				86801A5422DD484600739E54 /* RepoPresenter.swift in Sources */,
 				86801A4922DD3EDF00739E54 /* CustomRepoType.swift in Sources */,
+				86801A5622DD48BA00739E54 /* RepoInteractor.swift in Sources */,
 				86801A5022DD41CF00739E54 /* Item.swift in Sources */,
 				86801A0922DD2F5000739E54 /* AppDelegate.swift in Sources */,
 			);

@@ -12,6 +12,8 @@ class RepoViewController: UIViewController {
 
     @IBOutlet weak var repoTbv: UITableView!
     
+    var presenter: RepoPresenterProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -19,3 +21,14 @@ class RepoViewController: UIViewController {
     }
 }
 
+extension RepoViewController: RepoViewProtocol {
+    
+    func sucessRepo(itensRepo: [Item]) {
+        
+    }
+    
+    func failRepo() {
+        
+    }
+    
+}
