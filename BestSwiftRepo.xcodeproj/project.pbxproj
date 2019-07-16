@@ -26,6 +26,8 @@
 		86801A5822DD495800739E54 /* RepoAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86801A5722DD495700739E54 /* RepoAPIService.swift */; };
 		86801A5A22DD4A1C00739E54 /* RepoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86801A5922DD4A1C00739E54 /* RepoRouter.swift */; };
 		86801A5C22DD4A7100739E54 /* StoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86801A5B22DD4A7100739E54 /* StoryBoard.swift */; };
+		86801A5F22DD66F600739E54 /* RepoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86801A5E22DD66F600739E54 /* RepoViewCell.swift */; };
+		86801A6222DD6FAA00739E54 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86801A6122DD6FAA00739E54 /* UIView+Extension.swift */; };
 		D6F3E17230C04E52D2158C52 /* Pods_BestSwiftRepoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E844A63E67D675B375666A4C /* Pods_BestSwiftRepoUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +76,8 @@
 		86801A5722DD495700739E54 /* RepoAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoAPIService.swift; sourceTree = "<group>"; };
 		86801A5922DD4A1C00739E54 /* RepoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoRouter.swift; sourceTree = "<group>"; };
 		86801A5B22DD4A7100739E54 /* StoryBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoard.swift; sourceTree = "<group>"; };
+		86801A5E22DD66F600739E54 /* RepoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewCell.swift; sourceTree = "<group>"; };
+		86801A6122DD6FAA00739E54 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		99F2519E4C2B212BD017CEFD /* Pods-BestSwiftRepoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestSwiftRepoTests.debug.xcconfig"; path = "Target Support Files/Pods-BestSwiftRepoTests/Pods-BestSwiftRepoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A6A7B318CEE6A54FB18EABF5 /* Pods_BestSwiftRepoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BestSwiftRepoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE7398CE25A1A84C71211B45 /* Pods-BestSwiftRepoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestSwiftRepoUITests.release.xcconfig"; path = "Target Support Files/Pods-BestSwiftRepoUITests/Pods-BestSwiftRepoUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -276,6 +280,7 @@
 		86801A4622DD3E6000739E54 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				86801A6022DD6F9200739E54 /* Extension */,
 				86801A4722DD3EB300739E54 /* Enum */,
 				86801A5B22DD4A7100739E54 /* StoryBoard.swift */,
 			);
@@ -303,8 +308,17 @@
 		86801A5D22DD4C1900739E54 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				86801A5E22DD66F600739E54 /* RepoViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		86801A6022DD6F9200739E54 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				86801A6122DD6FAA00739E54 /* UIView+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -534,7 +548,9 @@
 				86801A0B22DD2F5000739E54 /* RepoViewController.swift in Sources */,
 				86801A5C22DD4A7100739E54 /* StoryBoard.swift in Sources */,
 				86801A5A22DD4A1C00739E54 /* RepoRouter.swift in Sources */,
+				86801A5F22DD66F600739E54 /* RepoViewCell.swift in Sources */,
 				86801A5822DD495800739E54 /* RepoAPIService.swift in Sources */,
+				86801A6222DD6FAA00739E54 /* UIView+Extension.swift in Sources */,
 				86801A5422DD484600739E54 /* RepoPresenter.swift in Sources */,
 				86801A4922DD3EDF00739E54 /* CustomRepoType.swift in Sources */,
 				86801A5622DD48BA00739E54 /* RepoInteractor.swift in Sources */,
