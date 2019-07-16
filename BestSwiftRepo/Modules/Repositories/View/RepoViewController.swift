@@ -145,13 +145,12 @@ extension RepoViewController: RepoViewProtocol {
         
         let alert = UIAlertController(title: "Alerta", message: "Houve algum erro ao requisitar os dados.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-            switch action.style{
+            switch action.style {
             case .default:
-                print("default")
-                
+                self.hud.dismiss()
+                self.refreshControl.endRefreshing()
             case .cancel:
                 print("cancel")
-                
             case .destructive:
                 print("destructive")
                 

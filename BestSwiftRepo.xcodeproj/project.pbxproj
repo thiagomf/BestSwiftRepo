@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2C99EDDD8628851AEB83CA49 /* Pods_BestSwiftRepoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A7B318CEE6A54FB18EABF5 /* Pods_BestSwiftRepoTests.framework */; };
 		48984A17F9570F3960E2A2D9 /* Pods_BestSwiftRepo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3988FC8440DF73CBC803ADBB /* Pods_BestSwiftRepo.framework */; };
-		8607044E22DE100800C5ED9E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8607044D22DE100800C5ED9E /* Utils.swift */; };
 		867B68B122DE50BF00339A8D /* LoadViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B68B022DE50BF00339A8D /* LoadViewCell.swift */; };
 		86801A0922DD2F5000739E54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86801A0822DD2F5000739E54 /* AppDelegate.swift */; };
 		86801A0B22DD2F5000739E54 /* RepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86801A0A22DD2F5000739E54 /* RepoViewController.swift */; };
@@ -55,7 +54,6 @@
 		14B49E8F838EB4B29280D2DF /* Pods-BestSwiftRepoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestSwiftRepoTests.release.xcconfig"; path = "Target Support Files/Pods-BestSwiftRepoTests/Pods-BestSwiftRepoTests.release.xcconfig"; sourceTree = "<group>"; };
 		3988FC8440DF73CBC803ADBB /* Pods_BestSwiftRepo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BestSwiftRepo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B830594EB98FDC2C967C835 /* Pods-BestSwiftRepoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestSwiftRepoUITests.debug.xcconfig"; path = "Target Support Files/Pods-BestSwiftRepoUITests/Pods-BestSwiftRepoUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		8607044D22DE100800C5ED9E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		867B68B022DE50BF00339A8D /* LoadViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadViewCell.swift; sourceTree = "<group>"; };
 		86801A0522DD2F5000739E54 /* BestSwiftRepo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestSwiftRepo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86801A0822DD2F5000739E54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -287,7 +285,6 @@
 				86801A6022DD6F9200739E54 /* Extension */,
 				86801A4722DD3EB300739E54 /* Enum */,
 				86801A5B22DD4A7100739E54 /* StoryBoard.swift */,
-				8607044D22DE100800C5ED9E /* Utils.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -553,7 +550,6 @@
 				86801A5222DD430A00739E54 /* Owner.swift in Sources */,
 				86801A0B22DD2F5000739E54 /* RepoViewController.swift in Sources */,
 				86801A5C22DD4A7100739E54 /* StoryBoard.swift in Sources */,
-				8607044E22DE100800C5ED9E /* Utils.swift in Sources */,
 				86801A5A22DD4A1C00739E54 /* RepoRouter.swift in Sources */,
 				86801A5F22DD66F600739E54 /* RepoViewCell.swift in Sources */,
 				867B68B122DE50BF00339A8D /* LoadViewCell.swift in Sources */,
