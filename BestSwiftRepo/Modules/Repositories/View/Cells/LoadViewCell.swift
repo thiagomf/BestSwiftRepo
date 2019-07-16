@@ -39,8 +39,8 @@ class LoadViewCell: UITableViewCell, CustomRepoElementCell {
                            paddingLeft: 15,
                            paddingBottom: 15,
                            paddingRight: 15,
-                           width: 90,
-                           height: 90,
+                           width: 50,
+                           height: 50,
                            enableInsets: false)
     }
     
