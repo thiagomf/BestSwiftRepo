@@ -8,4 +8,5 @@
 
 enum CustomRepoType: String {
     case dataCell
+    case loadCell
 }

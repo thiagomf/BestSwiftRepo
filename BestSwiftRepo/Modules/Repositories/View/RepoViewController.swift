@@ -17,7 +17,9 @@ class RepoViewController: UIViewController {
     
     var customElements: [CustomRepoElementModel]! = []
     
-     let hud = JGProgressHUD(style: .light)
+    let hud = JGProgressHUD(style: .light)
+    
+    var fetchingMore = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,9 +74,27 @@ extension RepoViewController: UITableViewDataSource {
     }
 }
 
+extension RepoViewController: UITableViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        
+        if offsetY > contentHeight - scrollView.frame.size.height {
+            if fetchingMore {
+                fetchingMore = false
+                presenter?.callRepoItens()
+                print("testeScroll")
+            }
+        }
+    }
+}
+
 extension RepoViewController: RepoViewProtocol {
     
     func showItens(itensRepo: [Item]) {
+        fetchingMore = true
         hud.dismiss()
         configureTbv(itens: itensRepo)
     }

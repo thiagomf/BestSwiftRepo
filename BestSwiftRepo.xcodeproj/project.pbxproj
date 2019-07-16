@@ -10,6 +10,7 @@
 		2C99EDDD8628851AEB83CA49 /* Pods_BestSwiftRepoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A7B318CEE6A54FB18EABF5 /* Pods_BestSwiftRepoTests.framework */; };
 		48984A17F9570F3960E2A2D9 /* Pods_BestSwiftRepo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3988FC8440DF73CBC803ADBB /* Pods_BestSwiftRepo.framework */; };
 		8607044E22DE100800C5ED9E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8607044D22DE100800C5ED9E /* Utils.swift */; };
+		867B68B122DE50BF00339A8D /* LoadViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B68B022DE50BF00339A8D /* LoadViewCell.swift */; };
 		86801A0922DD2F5000739E54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86801A0822DD2F5000739E54 /* AppDelegate.swift */; };
 		86801A0B22DD2F5000739E54 /* RepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86801A0A22DD2F5000739E54 /* RepoViewController.swift */; };
 		86801A1022DD2F5200739E54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86801A0F22DD2F5200739E54 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		3988FC8440DF73CBC803ADBB /* Pods_BestSwiftRepo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BestSwiftRepo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B830594EB98FDC2C967C835 /* Pods-BestSwiftRepoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestSwiftRepoUITests.debug.xcconfig"; path = "Target Support Files/Pods-BestSwiftRepoUITests/Pods-BestSwiftRepoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8607044D22DE100800C5ED9E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		867B68B022DE50BF00339A8D /* LoadViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadViewCell.swift; sourceTree = "<group>"; };
 		86801A0522DD2F5000739E54 /* BestSwiftRepo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestSwiftRepo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86801A0822DD2F5000739E54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86801A0A22DD2F5000739E54 /* RepoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewController.swift; sourceTree = "<group>"; };
@@ -312,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				86801A5E22DD66F600739E54 /* RepoViewCell.swift */,
+				867B68B022DE50BF00339A8D /* LoadViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -553,6 +556,7 @@
 				8607044E22DE100800C5ED9E /* Utils.swift in Sources */,
 				86801A5A22DD4A1C00739E54 /* RepoRouter.swift in Sources */,
 				86801A5F22DD66F600739E54 /* RepoViewCell.swift in Sources */,
+				867B68B122DE50BF00339A8D /* LoadViewCell.swift in Sources */,
 				86801A5822DD495800739E54 /* RepoAPIService.swift in Sources */,
 				86801A6222DD6FAA00739E54 /* UIView+Extension.swift in Sources */,
 				86801A5422DD484600739E54 /* RepoPresenter.swift in Sources */,

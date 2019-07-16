@@ -143,8 +143,6 @@ class RepoViewCell: UITableViewCell, CustomRepoElementCell {
         self.model = model
         let url = URL.init(string: self.model.item?.owner.avatarURL ?? "")
         self.authorImage.kf.setImage(with: url)
-//        self.authorImage.layer.cornerRadius = 5.0
-//        self.authorImage.layer.masksToBounds = true
         self.repoName.text = self.model.item?.name
         self.authorName.text = self.model.item?.owner.login
         self.countStars.text = "\(String(describing: self.model.item?.stargazersCount ?? 0))"
