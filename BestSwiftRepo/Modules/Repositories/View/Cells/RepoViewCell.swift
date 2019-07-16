@@ -44,9 +44,9 @@ class RepoViewCell: UITableViewCell, CustomRepoElementCell {
     
     private let authorImage: UIImageView = {
         let imgView = UIImageView(image: UIImage(named:"nophoto"))
-        imgView.contentMode = .scaleAspectFit
+        imgView.contentMode = .scaleToFill
         imgView.clipsToBounds = true
-        imgView.layer.cornerRadius = 5.0
+        imgView.layer.cornerRadius = 40.0
         imgView.layer.masksToBounds = true
         return imgView
     }()
@@ -79,12 +79,12 @@ class RepoViewCell: UITableViewCell, CustomRepoElementCell {
                            left: leftAnchor,
                            bottom: bottomAnchor,
                            right: nil,
-                           paddingTop: 5,
-                           paddingLeft: 5,
-                           paddingBottom: 5,
+                           paddingTop: 15,
+                           paddingLeft: 15,
+                           paddingBottom: 15,
                            paddingRight: 0,
                            width: 90,
-                           height: 120,
+                           height: 90,
                            enableInsets: false)
         
         repoName.anchor(top: topAnchor,
@@ -143,6 +143,8 @@ class RepoViewCell: UITableViewCell, CustomRepoElementCell {
         self.model = model
         let url = URL.init(string: self.model.item?.owner.avatarURL ?? "")
         self.authorImage.kf.setImage(with: url)
+//        self.authorImage.layer.cornerRadius = 5.0
+//        self.authorImage.layer.masksToBounds = true
         self.repoName.text = self.model.item?.name
         self.authorName.text = self.model.item?.owner.login
         self.countStars.text = "\(String(describing: self.model.item?.stargazersCount ?? 0))"
