@@ -23,7 +23,7 @@ class RepoViewController: UIViewController {
 
 extension RepoViewController: RepoViewProtocol {
     
-    func sucessRepo(itensRepo: [Item]) {
+    func showItens(itensRepo: [Item]) {
         
     }
     

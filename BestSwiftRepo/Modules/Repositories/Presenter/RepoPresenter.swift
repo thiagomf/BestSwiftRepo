@@ -9,6 +9,7 @@
 import UIKit
 
 class RepoPresenter: RepoPresenterProtocol {
+    
     var view: RepoViewProtocol?
     
     var interactor: RepoInteractorInputProtocol?
@@ -16,7 +17,8 @@ class RepoPresenter: RepoPresenterProtocol {
     var wireFrame: RepoWireframeProtocol?
     
     func callRepoItens() {
-        
+        interactor?.page += 1
+        interactor?.callRepoItens()
     }
 
 }
@@ -24,12 +26,11 @@ class RepoPresenter: RepoPresenterProtocol {
 extension RepoPresenter: RepoInteractorOutputProtocol {
     
     func sucessRepo(itensRepo: [Item]) {
-        
+        view?.showItens(itensRepo: itensRepo)
     }
     
     func failRepo() {
-        
+        view?.failRepo()
     }
-    
     
 }

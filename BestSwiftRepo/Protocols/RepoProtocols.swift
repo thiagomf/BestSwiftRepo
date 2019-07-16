@@ -22,7 +22,7 @@ protocol RepoViewProtocol: class {
     var presenter: RepoPresenterProtocol?  { get set }
     
     /* Presenter -> ViewController */
-    func sucessRepo(itensRepo: [Item])
+    func showItens(itensRepo: [Item])
     func failRepo()
 }
 
