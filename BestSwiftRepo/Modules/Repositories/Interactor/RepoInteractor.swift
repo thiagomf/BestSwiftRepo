@@ -37,6 +37,7 @@ extension RepoInteractor: RepoRemoteDataManagerOutputProtocol {
     
     func sucessPullToRefresh(repo: Repositories) {
         items = []
+        items.append(contentsOf: repo.items)
         presenter?.sucessRepo(itensRepo: repo.items)
     }
     

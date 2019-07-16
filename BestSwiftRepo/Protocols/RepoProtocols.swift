@@ -30,8 +30,6 @@ protocol RepoViewProtocol: class {
 protocol RepoWireframeProtocol: class {
     
     static func createRepoScreenModule() -> UINavigationController
-    
-    // PRESENTER -> WIREFRAME
 }
 
 //MARK: Presenter -

@@ -26,7 +26,7 @@ class RepoAPIService: NSObject, RepoRemoteDataManagerInputProtocol {
     func callAPIPullToRefresh(page: Int) {
         self.getRepositories(page: page, completion: { repo in
             if let repositor = repo {
-                self.remoteRequestHandler?.sucessItens(repo: repositor)
+                self.remoteRequestHandler?.sucessPullToRefresh(repo: repositor)
             } else {
                 self.remoteRequestHandler?.failItens()
             }
