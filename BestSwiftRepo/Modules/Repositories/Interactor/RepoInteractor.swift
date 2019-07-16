@@ -22,12 +22,22 @@ class RepoInteractor: RepoInteractorInputProtocol {
         remoteDataManager?.callAPIItensRepo(page: page)
     }
     
+    func callPullToRefresh() {
+        remoteDataManager?.callAPIPullToRefresh(page: page)
+    }
+    
 }
 
 extension RepoInteractor: RepoRemoteDataManagerOutputProtocol {
+
     func sucessItens(repo: Repositories) {
         items.append(contentsOf: repo.items)
         presenter?.sucessRepo(itensRepo: items)
+    }
+    
+    func sucessPullToRefresh(repo: Repositories) {
+        items = []
+        presenter?.sucessRepo(itensRepo: repo.items)
     }
     
     func failItens() {

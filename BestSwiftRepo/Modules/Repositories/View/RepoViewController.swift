@@ -21,11 +21,14 @@ class RepoViewController: UIViewController {
     
     var fetchingMore = false
     
+    var refreshControl = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupNavDesign()
         confHUD()
+        confPulltoRefresh()
         hud.show(in: self.view)
         presenter?.callRepoItens()
     }
@@ -43,6 +46,17 @@ class RepoViewController: UIViewController {
         hud.textLabel.text = "Carregando"
     }
     
+    func confPulltoRefresh() {
+        
+        if #available(iOS 10.0, *) {
+            repoTbv.refreshControl = refreshControl
+        } else {
+            repoTbv.addSubview(refreshControl)
+        }
+        
+        refreshControl.addTarget(self, action: #selector(refreshTbv(_:)), for: .valueChanged)
+    }
+    
     func configureTbv(itens: [Item]) {
         
         customElements = []
@@ -57,6 +71,10 @@ class RepoViewController: UIViewController {
         repoTbv.rowHeight = UITableView.automaticDimension
         repoTbv.estimatedRowHeight = 50
         repoTbv.reloadData()
+    }
+    
+    @objc private func refreshTbv(_ sender: Any) {
+        presenter?.pullToRefreshRepo()
     }
 }
 
@@ -118,6 +136,7 @@ extension RepoViewController: RepoViewProtocol {
     
     func showItens(itensRepo: [Item]) {
         fetchingMore = true
+        self.refreshControl.endRefreshing()
         hud.dismiss()
         configureTbv(itens: itensRepo)
     }

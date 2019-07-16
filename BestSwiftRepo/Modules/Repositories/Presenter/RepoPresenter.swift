@@ -9,7 +9,7 @@
 import UIKit
 
 class RepoPresenter: RepoPresenterProtocol {
-    
+
     var view: RepoViewProtocol?
     
     var interactor: RepoInteractorInputProtocol?
@@ -19,6 +19,11 @@ class RepoPresenter: RepoPresenterProtocol {
     func callRepoItens() {
         interactor?.page += 1
         interactor?.callRepoItens()
+    }
+    
+    func pullToRefreshRepo() {
+        interactor?.page = 1
+        interactor?.callPullToRefresh()
     }
 
 }

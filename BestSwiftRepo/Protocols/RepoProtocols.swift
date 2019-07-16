@@ -42,6 +42,7 @@ protocol RepoPresenterProtocol: class {
     var wireFrame: RepoWireframeProtocol? { get set }
 
     func callRepoItens()
+    func pullToRefreshRepo()
 }
 
 //MARK: Interactor -
@@ -61,6 +62,7 @@ protocol RepoInteractorInputProtocol: class {
     
     /* Presenter -> Interactor */
     func callRepoItens()
+    func callPullToRefresh()
 }
 
 protocol RepoRemoteDataManagerInputProtocol: class {
@@ -68,11 +70,13 @@ protocol RepoRemoteDataManagerInputProtocol: class {
     
     // INTERACTOR -> REMOTEDATAMANAGER
     func callAPIItensRepo(page: Int)
+    func callAPIPullToRefresh(page: Int)
 }
 
 protocol RepoRemoteDataManagerOutputProtocol: class {
     
     // REMOTEDATAMANAGER -> INTERACTOR
     func sucessItens(repo: Repositories)
+    func sucessPullToRefresh(repo: Repositories)
     func failItens()
 }
