@@ -16,7 +16,7 @@ class RepoInteractor: RepoInteractorInputProtocol {
     
     var page: Int = 0
     
-    var items: [Item]?
+    var items: [Item] = []
     
     func callRepoItens() {
         remoteDataManager?.callAPIItensRepo(page: page)
@@ -26,8 +26,8 @@ class RepoInteractor: RepoInteractorInputProtocol {
 
 extension RepoInteractor: RepoRemoteDataManagerOutputProtocol {
     func sucessItens(repo: Repositories) {
-        items?.append(contentsOf: repo.items)
-        presenter?.sucessRepo(itensRepo: items ?? [])
+        items.append(contentsOf: repo.items)
+        presenter?.sucessRepo(itensRepo: items)
     }
     
     func failItens() {

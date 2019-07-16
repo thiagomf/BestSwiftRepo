@@ -46,6 +46,8 @@ class RepoViewCell: UITableViewCell, CustomRepoElementCell {
         let imgView = UIImageView(image: UIImage(named:"nophoto"))
         imgView.contentMode = .scaleAspectFit
         imgView.clipsToBounds = true
+        imgView.layer.cornerRadius = 5.0
+        imgView.layer.masksToBounds = true
         return imgView
     }()
     
@@ -82,7 +84,7 @@ class RepoViewCell: UITableViewCell, CustomRepoElementCell {
                            paddingBottom: 5,
                            paddingRight: 0,
                            width: 90,
-                           height: 0,
+                           height: 120,
                            enableInsets: false)
         
         repoName.anchor(top: topAnchor,
@@ -109,22 +111,21 @@ class RepoViewCell: UITableViewCell, CustomRepoElementCell {
                           height: 0,
                           enableInsets: false)
         
-        
         let stackView = UIStackView(arrangedSubviews: [starImage,countStars])
-        stackView.distribution = .equalSpacing
+        stackView.distribution = .fillProportionally
         stackView.axis = .horizontal
         stackView.spacing = 5
         addSubview(stackView)
-        stackView.anchor(top: topAnchor,
-                         left: repoName.rightAnchor,
+        stackView.anchor(top: authorName.bottomAnchor,
+                         left: authorImage.rightAnchor,
                          bottom: bottomAnchor,
                          right: rightAnchor,
-                         paddingTop: 15,
-                         paddingLeft: 5,
-                         paddingBottom: 15,
-                         paddingRight: 10,
-                         width: 0,
-                         height: 70,
+                         paddingTop: 0,
+                         paddingLeft: 10,
+                         paddingBottom: 0,
+                         paddingRight: 50,
+                         width: frame.size.width / 2,
+                         height: 30,
                          enableInsets: false)
     }
     
@@ -133,12 +134,18 @@ class RepoViewCell: UITableViewCell, CustomRepoElementCell {
     }
 
     func configure(withModel elementModel: CustomRepoElementModel) {
+        
         guard let model = elementModel as? RepoElement else {
             print("Unable to cast model as RepoElement: \(elementModel)")
             return
         }
         
         self.model = model
+        let url = URL.init(string: self.model.item?.owner.avatarURL ?? "")
+        self.authorImage.kf.setImage(with: url)
+        self.repoName.text = self.model.item?.name
+        self.authorName.text = self.model.item?.owner.login
+        self.countStars.text = "\(String(describing: self.model.item?.stargazersCount ?? 0))"
     }
     
 }
