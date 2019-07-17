@@ -64,6 +64,7 @@ class RepoViewControllerSpec: QuickSpec {
                     it("should record tableview with best repositories") {
                         
                         let repo = Utils.loadJson(filename: "repo")
+                        
                         self.sut.showItens(itensRepo: repo?.items ?? [])
                         
                         if self.shouldSnapShot {

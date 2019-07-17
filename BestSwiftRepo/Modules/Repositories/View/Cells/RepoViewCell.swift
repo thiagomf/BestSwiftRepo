@@ -33,7 +33,6 @@ class RepoViewCell: UITableViewCell, CustomRepoElementCell {
         return lbl
     }()
     
-    
     private let authorName: UILabel = {
         let lbl = UILabel()
         lbl.textColor = .black
