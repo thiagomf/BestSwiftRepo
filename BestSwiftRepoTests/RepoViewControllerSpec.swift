@@ -8,6 +8,7 @@
 
 import Quick
 import Nimble
+import Nimble_Snapshots
 
 @testable import BestSwiftRepo
 
@@ -33,6 +34,7 @@ class RepoViewControllerSpec: QuickSpec {
     
     private var presenter: RepoPresenterMock!
     var sut: RepoViewController!
+    var shouldSnapShot = false
     
     override func spec() {
         describe("RepoView") {
@@ -57,6 +59,17 @@ class RepoViewControllerSpec: QuickSpec {
                         self.sut.configureTbv(itens: repo?.items ?? [])
                         
                         expect(self.sut.repoTbv.numberOfRows(inSection: 0)).to(equal(25))
+                    }
+                    
+                    it("should record tableview with best repositories") {
+                        
+                        let repo = Utils.loadJson(filename: "repo")
+                        self.sut.configureTbv(itens: repo?.items ?? [])
+                        if self.shouldSnapShot {
+                            expect(self.sut).to(recordSnapshot(named: "RepoViewController"))
+                        } else {
+                            expect(self.sut) == snapshot("RepoViewController")
+                        }
                     }
                 }
             }
