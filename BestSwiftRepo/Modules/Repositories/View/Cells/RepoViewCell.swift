@@ -47,7 +47,7 @@ class RepoViewCell: UITableViewCell, CustomRepoElementCell {
         let imgView = UIImageView(image: UIImage(named:"nophoto"))
         imgView.contentMode = .scaleToFill
         imgView.clipsToBounds = true
-        imgView.layer.cornerRadius = 40.0
+        imgView.layer.cornerRadius = 45.0
         imgView.layer.masksToBounds = true
         return imgView
     }()
@@ -80,9 +80,9 @@ class RepoViewCell: UITableViewCell, CustomRepoElementCell {
                            left: leftAnchor,
                            bottom: bottomAnchor,
                            right: nil,
-                           paddingTop: 15,
+                           paddingTop: 25,
                            paddingLeft: 15,
-                           paddingBottom: 15,
+                           paddingBottom: 25,
                            paddingRight: 0,
                            width: 90,
                            height: 90,
