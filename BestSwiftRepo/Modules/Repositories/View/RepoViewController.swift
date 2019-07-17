@@ -49,8 +49,10 @@ class RepoViewController: UIViewController {
     func confPulltoRefresh() {
         
         if #available(iOS 10.0, *) {
+            
             repoTbv.refreshControl = refreshControl
         } else {
+            
             repoTbv.addSubview(refreshControl)
         }
         
@@ -74,6 +76,7 @@ class RepoViewController: UIViewController {
     }
     
     @objc private func refreshTbv(_ sender: Any) {
+        
         presenter?.pullToRefreshRepo()
     }
 }
