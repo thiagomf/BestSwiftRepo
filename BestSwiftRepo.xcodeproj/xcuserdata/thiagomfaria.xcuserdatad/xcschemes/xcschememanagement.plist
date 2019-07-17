@@ -7,7 +7,25 @@
 		<key>BestSwiftRepo.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>11</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>86801A0422DD2F5000739E54</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>86801A1822DD2F5200739E54</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>86801A2322DD2F5200739E54</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
