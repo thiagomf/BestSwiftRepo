@@ -86,6 +86,23 @@ class RepoViewControllerSpec: QuickSpec {
                     }
                 }
                 
+                describe("show message of fail repositories") {
+                    context("when appear mensage of error") {
+                        it("show alert view - record snapShot") {
+                            
+                            self.sut.showItens(itensRepo: [])
+                            
+                            self.sut.failRepo()
+                            
+                            if self.shouldSnapShot {
+                                expect(self.sut).to(recordSnapshot(named: "FailAlertView"))
+                            } else {
+                                expect(self.sut) == snapshot("FailAlertView")
+                            }
+                        }
+                    }
+                }
+                
                 context("RepoViewCell") {
                     var cell: RepoViewCell!
                     
