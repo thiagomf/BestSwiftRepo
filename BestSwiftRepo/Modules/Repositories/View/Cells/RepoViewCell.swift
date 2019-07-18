@@ -25,7 +25,7 @@ class RepoViewCell: UITableViewCell, CustomRepoElementCell {
 
     var model: RepoElement!
     
-    private let repoName: UILabel = {
+    public let repoName: UILabel = {
         let lbl = UILabel()
         lbl.textColor = .black
         lbl.font = UIFont.boldSystemFont(ofSize: 16)
@@ -33,7 +33,7 @@ class RepoViewCell: UITableViewCell, CustomRepoElementCell {
         return lbl
     }()
     
-    private let authorName: UILabel = {
+    public let authorName: UILabel = {
         let lbl = UILabel()
         lbl.textColor = .black
         lbl.font = UIFont.systemFont(ofSize: 16)
@@ -42,7 +42,7 @@ class RepoViewCell: UITableViewCell, CustomRepoElementCell {
         return lbl
     }()
     
-    private let authorImage: UIImageView = {
+    public let authorImage: UIImageView = {
         let imgView = UIImageView(image: UIImage(named:"nophoto"))
         imgView.contentMode = .scaleToFill
         imgView.clipsToBounds = true
@@ -51,14 +51,14 @@ class RepoViewCell: UITableViewCell, CustomRepoElementCell {
         return imgView
     }()
     
-    private let starImage: UIImageView = {
+    public let starImage: UIImageView = {
         let imgView = UIImageView(image: UIImage(named:"staricon"))
         imgView.contentMode = .scaleAspectFit
         imgView.clipsToBounds = true
         return imgView
     }()
     
-    private let countStars: UILabel = {
+    public let countStars: UILabel = {
         let lbl = UILabel()
         lbl.textColor = .black
         lbl.font = UIFont.systemFont(ofSize: 16)

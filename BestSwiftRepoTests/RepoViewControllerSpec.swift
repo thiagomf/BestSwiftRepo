@@ -48,24 +48,20 @@ class RepoViewControllerSpec: QuickSpec {
 
                 self.sut.presenter = self.presenter
                 _ = self.sut.view
+                
+                let repo = Utils.loadJson(filename: "repo")
+                
+                self.sut.configureTbv(itens: repo?.items ?? [])
             }
             
             describe("load repositorie data") {
                 context("when load mock json") {
                     it("should have 25 repo loaded") {
                         
-                        let repo = Utils.loadJson(filename: "repo")
-        
-                        self.sut.configureTbv(itens: repo?.items ?? [])
-                        
                         expect(self.sut.repoTbv.numberOfRows(inSection: 0)).to(equal(25))
                     }
                     
                     it("should record tableview with best repositories") {
-                        
-                        let repo = Utils.loadJson(filename: "repo")
-                        
-                        self.sut.showItens(itensRepo: repo?.items ?? [])
                         
                         if self.shouldSnapShot {
                             expect(self.sut).to(recordSnapshot(named: "RepoViewController"))
@@ -74,8 +70,65 @@ class RepoViewControllerSpec: QuickSpec {
                         }
                     }
                 }
+                
+                context("RepoViewCell") {
+                    var cell: RepoViewCell!
+                    
+                    beforeEach {
+                        
+                        let repo = Utils.loadJson(filename: "repo")
+                        
+                        self.sut.showItens(itensRepo: repo?.items ?? [])
+                        
+                        cell = self.sut.tableView(self.sut.repoTbv, cellForRowAt: IndexPath(row: 0, section: 0)) as? RepoViewCell
+                        
+                    }
+                    
+                    it("should show repo name stars and author name") {
+                        
+                        expect(cell.repoName.text).to(equal("awesome-ios"))
+                        expect(cell.authorName.text).to(equal("vsouza"))
+                        expect(cell.countStars.text).to(equal("32324"))
+                    }
+                    
+                    it("should record RepoViewCell row 0") {
+                        
+                        if self.shouldSnapShot {
+                            expect(cell).to(recordSnapshot(named: "RepoViewCell"))
+                        } else {
+                            expect(cell) == snapshot("RepoViewCell")
+                        }
+                    }
+                }
+                
+                context("LoadViewCell") {
+                    var cell: LoadViewCell!
+                    
+                    beforeEach {
+                        
+                        let repo = Utils.loadJson(filename: "repo")
+                        
+                        self.sut.showItens(itensRepo: repo?.items ?? [])
+                        
+                        cell = self.sut.tableView(self.sut.repoTbv, cellForRowAt: IndexPath(row: 0, section: 1)) as? LoadViewCell
+                        
+                    }
+                    
+                    it("should show start activity animation") {
+                        
+                        expect(cell.loadProgress.isAnimating).to(equal(true))
+                    }
+                    
+                    it("should record LoadViewCell row 0") {
+                        
+                        if self.shouldSnapShot {
+                            expect(cell).to(recordSnapshot(named: "LoadViewCell"))
+                        } else {
+                            expect(cell) == snapshot("LoadViewCell")
+                        }
+                    }
+                }
             }
         }
     }
-
 }

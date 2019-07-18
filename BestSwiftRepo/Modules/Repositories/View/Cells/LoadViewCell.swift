@@ -21,7 +21,7 @@ class LoadViewCell: UITableViewCell, CustomRepoElementCell {
 
     var model: LoadElement!
     
-    private let loadProgress: UIActivityIndicatorView = {
+    public let loadProgress: UIActivityIndicatorView = {
         let loadP = UIActivityIndicatorView(style: .gray)
         return loadP
     }()
