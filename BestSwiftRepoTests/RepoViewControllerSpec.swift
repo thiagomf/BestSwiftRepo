@@ -22,12 +22,16 @@ class RepoViewControllerSpec: QuickSpec {
         
         var wireFrame: RepoWireframeProtocol?
         
+        var callRepo = false
+        
+        var callPull = false
+        
         func callRepoItens() {
-            interactor?.callRepoItens()
+            callRepo = true
         }
         
         func pullToRefreshRepo() {
-            interactor?.callPullToRefresh()
+            callPull = true
         }
         
     }
@@ -68,6 +72,17 @@ class RepoViewControllerSpec: QuickSpec {
                         } else {
                             expect(self.sut) == snapshot("RepoViewController")
                         }
+                    }
+                    
+                    it("should protocol presenter mock is true") {
+                        
+                        self.presenter.callRepoItens()
+                        
+                        expect(self.presenter.callRepo).to(equal(true))
+                        
+                        self.presenter.pullToRefreshRepo()
+                        
+                        expect(self.presenter.callPull).to(equal(true))
                     }
                 }
                 
