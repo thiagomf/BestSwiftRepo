@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1100"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E8022D22FAA6690B5E1C379C1BCE1491"
-               BuildableName = "Kingfisher.framework"
+               BlueprintIdentifier = "845D2511E894AFF79B9E6AE38F5152F3"
                BlueprintName = "Kingfisher"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "Kingfisher.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

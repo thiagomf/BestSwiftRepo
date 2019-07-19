@@ -146,6 +146,27 @@ class RepoViewCell: UITableViewCell, CustomRepoElementCell {
         self.repoName.text = self.model.item?.name
         self.authorName.text = self.model.item?.owner.login
         self.countStars.text = "\(String(describing: self.model.item?.stargazersCount ?? 0))"
+        setupAcessibility(self.model)
+    }
+    
+    func setupAcessibility(_ model: RepoElement) {
+        
+        self.repoName.isAccessibilityElement = true
+        self.repoName.accessibilityValue = model.item?.name
+        self.repoName.accessibilityLabel = "Repositório"
+        self.repoName.accessibilityTraits = .staticText
+        
+        self.authorName.isAccessibilityElement = true
+        self.authorName.accessibilityValue = self.model.item?.owner.login
+        self.authorName.accessibilityLabel = "Autor"
+        self.authorName.accessibilityTraits = .staticText
+        
+        self.countStars.isAccessibilityElement = true
+        self.countStars.accessibilityValue = "\(String(describing: self.model.item?.stargazersCount ?? 0))"
+        self.countStars.accessibilityLabel = "Classificação"
+        self.countStars.accessibilityTraits = .staticText
+        
+        self.accessibilityElements = [self.repoName, self.authorName, self.countStars]
     }
     
 }

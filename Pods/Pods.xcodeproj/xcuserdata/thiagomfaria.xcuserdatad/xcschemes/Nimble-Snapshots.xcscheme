@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1100"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EE19095A8C98E0BC5774005673495238"
+               BlueprintIdentifier = "EED81DC94FD274E10F77F94178603E5E"
                BuildableName = "Nimble_Snapshots.framework"
                BlueprintName = "Nimble-Snapshots"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EE19095A8C98E0BC5774005673495238"
+            BlueprintIdentifier = "EED81DC94FD274E10F77F94178603E5E"
             BuildableName = "Nimble_Snapshots.framework"
             BlueprintName = "Nimble-Snapshots"
             ReferencedContainer = "container:Pods.xcodeproj">

@@ -9,7 +9,6 @@
 import Foundation
 import XCTest
 import UIKit
-import Nimble
 import KIF
 
 @testable import BestSwiftRepo
@@ -36,6 +35,6 @@ class BestSwiftRepoUITests: KIFTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
 
         tester().waitForAnimationsToFinish()
-        tester().waitForView(withAccessibilityLabel: "Best")
+        tester().waitForView(withAccessibilityLabel: "Autor")
     }
 }

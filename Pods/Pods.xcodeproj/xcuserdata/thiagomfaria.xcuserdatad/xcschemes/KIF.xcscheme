@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1100"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "411CAEB7B6FE73F61BEDA037CB93E566"
-               BuildableName = "KIF.framework"
+               BlueprintIdentifier = "C7DBEF3564610F6D090BA008C56B5443"
                BlueprintName = "KIF"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "KIF.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
