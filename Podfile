@@ -21,6 +21,11 @@ target 'BestSwiftRepo' do
   target 'BestSwiftRepoUITests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Nimble'
+    pod 'Alamofire'
+    pod 'JGProgressHUD'
+    pod 'Kingfisher'
+    pod 'KIF', :configurations => ['Debug']
   end
 
 end

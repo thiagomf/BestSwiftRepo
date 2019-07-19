@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2C99EDDD8628851AEB83CA49 /* Pods_BestSwiftRepoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A7B318CEE6A54FB18EABF5 /* Pods_BestSwiftRepoTests.framework */; };
 		48984A17F9570F3960E2A2D9 /* Pods_BestSwiftRepo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3988FC8440DF73CBC803ADBB /* Pods_BestSwiftRepo.framework */; };
+		860D06DB22E129C300D6702C /* KIF+SwiftExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860D06DA22E129C300D6702C /* KIF+SwiftExtension.swift */; };
 		867B68B122DE50BF00339A8D /* LoadViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B68B022DE50BF00339A8D /* LoadViewCell.swift */; };
 		86801A0922DD2F5000739E54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86801A0822DD2F5000739E54 /* AppDelegate.swift */; };
 		86801A0B22DD2F5000739E54 /* RepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86801A0A22DD2F5000739E54 /* RepoViewController.swift */; };
@@ -57,6 +58,7 @@
 		14B49E8F838EB4B29280D2DF /* Pods-BestSwiftRepoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestSwiftRepoTests.release.xcconfig"; path = "Target Support Files/Pods-BestSwiftRepoTests/Pods-BestSwiftRepoTests.release.xcconfig"; sourceTree = "<group>"; };
 		3988FC8440DF73CBC803ADBB /* Pods_BestSwiftRepo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BestSwiftRepo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B830594EB98FDC2C967C835 /* Pods-BestSwiftRepoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestSwiftRepoUITests.debug.xcconfig"; path = "Target Support Files/Pods-BestSwiftRepoUITests/Pods-BestSwiftRepoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		860D06DA22E129C300D6702C /* KIF+SwiftExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KIF+SwiftExtension.swift"; sourceTree = "<group>"; };
 		867B68B022DE50BF00339A8D /* LoadViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadViewCell.swift; sourceTree = "<group>"; };
 		86801A0522DD2F5000739E54 /* BestSwiftRepo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestSwiftRepo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86801A0822DD2F5000739E54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		86AF94C522DF9524001CED70 /* RepoViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewControllerSpec.swift; sourceTree = "<group>"; };
 		86AF94C922DF98CF001CED70 /* repo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = repo.json; sourceTree = "<group>"; };
 		86AF94CB22DF992D001CED70 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		86B8453B22E14EC600F79B4A /* BestSwiftRepoUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BestSwiftRepoUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		99F2519E4C2B212BD017CEFD /* Pods-BestSwiftRepoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestSwiftRepoTests.debug.xcconfig"; path = "Target Support Files/Pods-BestSwiftRepoTests/Pods-BestSwiftRepoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A6A7B318CEE6A54FB18EABF5 /* Pods_BestSwiftRepoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BestSwiftRepoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE7398CE25A1A84C71211B45 /* Pods-BestSwiftRepoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestSwiftRepoUITests.release.xcconfig"; path = "Target Support Files/Pods-BestSwiftRepoUITests/Pods-BestSwiftRepoUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -193,6 +196,8 @@
 			children = (
 				86801A2822DD2F5200739E54 /* BestSwiftRepoUITests.swift */,
 				86801A2A22DD2F5200739E54 /* Info.plist */,
+				860D06DA22E129C300D6702C /* KIF+SwiftExtension.swift */,
+				86B8453B22E14EC600F79B4A /* BestSwiftRepoUITests-Bridging-Header.h */,
 			);
 			path = BestSwiftRepoUITests;
 			sourceTree = "<group>";
@@ -381,6 +386,7 @@
 				86801A2022DD2F5200739E54 /* Sources */,
 				86801A2122DD2F5200739E54 /* Frameworks */,
 				86801A2222DD2F5200739E54 /* Resources */,
+				B91D74D730F2113DFCFEE306 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -411,6 +417,7 @@
 					};
 					86801A2322DD2F5200739E54 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 86801A0422DD2F5000739E54;
 					};
 				};
@@ -548,6 +555,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B91D74D730F2113DFCFEE306 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BestSwiftRepoUITests/Pods-BestSwiftRepoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BestSwiftRepoUITests/Pods-BestSwiftRepoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BestSwiftRepoUITests/Pods-BestSwiftRepoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CDD9446DC9045062CA5A2D90 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -603,6 +627,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				860D06DB22E129C300D6702C /* KIF+SwiftExtension.swift in Sources */,
 				86801A2922DD2F5200739E54 /* BestSwiftRepoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -755,6 +780,7 @@
 			baseConfigurationReference = 0CA665AEE32BEAA6549D0648 /* Pods-BestSwiftRepo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_LOADER = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A62T4XMM89;
 				INFOPLIST_FILE = "$(SRCROOT)/BestSwiftRepo/Resources/Info.plist";
@@ -764,8 +790,12 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = thiagomf.com.br.BestSwiftRepo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "";
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
+				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
@@ -774,6 +804,7 @@
 			baseConfigurationReference = E3812E2D1A68930D052286A6 /* Pods-BestSwiftRepo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_LOADER = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A62T4XMM89;
 				INFOPLIST_FILE = "$(SRCROOT)/BestSwiftRepo/Resources/Info.plist";
@@ -783,8 +814,12 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = thiagomf.com.br.BestSwiftRepo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "";
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
+				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
@@ -837,6 +872,8 @@
 			baseConfigurationReference = 3B830594EB98FDC2C967C835 /* Pods-BestSwiftRepoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A62T4XMM89;
 				INFOPLIST_FILE = BestSwiftRepoUITests/Info.plist;
@@ -847,8 +884,11 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = thiagomf.com.br.BestSwiftRepoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BestSwiftRepoUITests/BestSwiftRepoUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "";
 				TEST_TARGET_NAME = BestSwiftRepo;
 			};
 			name = Debug;
@@ -858,6 +898,8 @@
 			baseConfigurationReference = BE7398CE25A1A84C71211B45 /* Pods-BestSwiftRepoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A62T4XMM89;
 				INFOPLIST_FILE = BestSwiftRepoUITests/Info.plist;
@@ -868,8 +910,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = thiagomf.com.br.BestSwiftRepoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BestSwiftRepoUITests/BestSwiftRepoUITests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "";
 				TEST_TARGET_NAME = BestSwiftRepo;
 			};
 			name = Release;
