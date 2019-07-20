@@ -10,6 +10,7 @@ import Foundation
 import XCTest
 import UIKit
 import KIF
+import Nimble
 
 @testable import BestSwiftRepo
 
@@ -21,20 +22,18 @@ class BestSwiftRepoUITests: KIFTestCase {
         super.setUp()
         
         KIFEnableAccessibility()
+        XCUIApplication().launch()
         
-        
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-//    override func tearDown() {
-//        // Put teardown code here. This method is called after the invocation of each test method in the class.
-//        super.tearDown()
-//    }
 
-    func testExample() {
+    func testSwipe() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-
-        tester().waitForAnimationsToFinish()
-        tester().waitForView(withAccessibilityLabel: "Autor")
+        
+        //tentei fazer com KIF mas por algum motivo dá KIF fails to find accessibility labels talvez seja por causa da versão ios 12
+        let tableviewrepoTable = XCUIApplication().tables["tableViewRepo"]
+        for _ in 1...40 {
+            tableviewrepoTable.swipeUp()
+        }
     }
 }

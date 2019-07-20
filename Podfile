@@ -24,7 +24,8 @@ target 'BestSwiftRepo' do
     pod 'Alamofire'
     pod 'JGProgressHUD'
     pod 'Kingfisher'
-    pod 'KIF', :configurations => ['Debug']
+    pod 'Nimble'
+    pod 'KIF'
   end
 
 end
