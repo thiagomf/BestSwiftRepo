@@ -90,24 +90,24 @@ class RepoViewCell: UITableViewCell, CustomRepoElementCell {
         repoName.anchor(top: topAnchor,
                         left: authorImage.rightAnchor,
                         bottom: nil,
-                        right: nil,
+                        right: rightAnchor,
                         paddingTop: 20,
                         paddingLeft: 10,
                         paddingBottom: 0,
                         paddingRight: 0,
-                        width: frame.size.width / 2,
+                        width: 0,
                         height: 0,
                         enableInsets: false)
         
         authorName.anchor(top: repoName.bottomAnchor,
                           left: authorImage.rightAnchor,
                           bottom: nil,
-                          right: nil,
+                          right: rightAnchor,
                           paddingTop: 0,
                           paddingLeft: 10,
                           paddingBottom: 0,
                           paddingRight: 0,
-                          width: frame.size.width / 2,
+                          width: 0,
                           height: 0,
                           enableInsets: false)
         
@@ -124,7 +124,7 @@ class RepoViewCell: UITableViewCell, CustomRepoElementCell {
                          paddingLeft: 10,
                          paddingBottom: 0,
                          paddingRight: 50,
-                         width: frame.size.width / 2,
+                         width: 0,
                          height: 30,
                          enableInsets: false)
     }
