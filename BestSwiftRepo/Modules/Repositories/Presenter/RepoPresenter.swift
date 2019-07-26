@@ -10,7 +10,7 @@ import UIKit
 
 class RepoPresenter: RepoPresenterProtocol {
 
-    var view: RepoViewProtocol?
+    weak var view: RepoViewProtocol?
     
     var interactor: RepoInteractorInputProtocol?
     

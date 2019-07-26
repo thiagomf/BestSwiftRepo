@@ -10,7 +10,7 @@ import UIKit
 
 class RepoInteractor: RepoInteractorInputProtocol {
     
-    var presenter: RepoInteractorOutputProtocol?
+    weak var presenter: RepoInteractorOutputProtocol?
     
     var remoteDataManager: RepoRemoteDataManagerInputProtocol?
     
