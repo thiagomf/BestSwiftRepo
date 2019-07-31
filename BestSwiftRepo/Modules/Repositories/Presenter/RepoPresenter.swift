@@ -10,6 +10,8 @@ import UIKit
 
 class RepoPresenter: RepoPresenterProtocol {
 
+    var fetchingMore: Bool = false
+
     weak var view: RepoViewProtocol?
     
     var interactor: RepoInteractorInputProtocol?
@@ -26,6 +28,18 @@ class RepoPresenter: RepoPresenterProtocol {
         interactor?.callPullToRefresh()
     }
 
+    func scrollTableView(scrollView: UIScrollView) {
+        
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        
+        if offsetY > contentHeight - scrollView.frame.size.height {
+            if fetchingMore {
+                fetchingMore = false
+                callRepoItens()
+            }
+        }
+    }
 }
 
 extension RepoPresenter: RepoInteractorOutputProtocol {

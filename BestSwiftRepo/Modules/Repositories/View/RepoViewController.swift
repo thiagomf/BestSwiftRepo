@@ -19,8 +19,6 @@ class RepoViewController: UIViewController {
     
     let hud = JGProgressHUD(style: .light)
     
-    var fetchingMore = false
-    
     var refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
@@ -90,7 +88,7 @@ extension RepoViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return customElements.count
-        } else if section == 1 && fetchingMore {
+        } else if section == 1 && presenter!.fetchingMore {
             return 1
         }
         return 0
@@ -123,22 +121,14 @@ extension RepoViewController: UITableViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
-        let offsetY = scrollView.contentOffset.y
-        let contentHeight = scrollView.contentSize.height
-        
-        if offsetY > contentHeight - scrollView.frame.size.height {
-            if fetchingMore {
-                fetchingMore = false
-                presenter?.callRepoItens()
-            }
-        }
+        presenter?.scrollTableView(scrollView: scrollView)
     }
 }
 
 extension RepoViewController: RepoViewProtocol {
     
     func showItens(itensRepo: [Item]) {
-        fetchingMore = true
+        presenter?.fetchingMore = true
         self.refreshControl.endRefreshing()
         hud.dismiss()
         configureTbv(itens: itensRepo)

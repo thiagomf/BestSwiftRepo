@@ -38,9 +38,12 @@ protocol RepoPresenterProtocol: class {
     var view: RepoViewProtocol? { get set }
     var interactor: RepoInteractorInputProtocol? { get set }
     var wireFrame: RepoWireframeProtocol? { get set }
-
+    var fetchingMore: Bool { get set }
+    
     func callRepoItens()
     func pullToRefreshRepo()
+    func scrollTableView(scrollView: UIScrollView)
+    
 }
 
 //MARK: Interactor -
