@@ -170,7 +170,11 @@ class RepoViewCell: UITableViewCell, CustomRepoElementCell {
         self.authorName.accessibilityTraits = .staticText
         
         self.countStars.isAccessibilityElement = true
-        self.countStars.accessibilityValue = "\(String(describing: self.model.item?.stargazersCount ?? 0))"
+        
+        if let count = self.model.item?.stargazersCount {
+            self.countStars.accessibilityValue = "\(count)"
+        }
+
         self.countStars.accessibilityLabel = "Classificação"
         self.countStars.accessibilityTraits = .staticText
         
