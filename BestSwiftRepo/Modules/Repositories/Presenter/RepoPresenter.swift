@@ -10,13 +10,13 @@ import UIKit
 
 class RepoPresenter: RepoPresenterProtocol {
 
-    var fetchingMore: Bool = false
-
     weak var view: RepoViewProtocol?
     
     var interactor: RepoInteractorInputProtocol?
     
     var wireFrame: RepoWireframeProtocol?
+    
+    var fetchingMore: Bool = false
     
     func callRepoItens() {
         interactor?.page += 1
