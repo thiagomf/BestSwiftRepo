@@ -142,7 +142,7 @@ class RepoViewCell: UITableViewCell, CustomRepoElementCell {
         
         self.model = model
         
-        if let avatarUrl = self.model.item?.owner.avatarURL {
+        if let avatarUrl = self.model.item?.owner.avatarUrl {
             let url = URL.init(string: avatarUrl)
             self.authorImage.kf.setImage(with: url)
         }

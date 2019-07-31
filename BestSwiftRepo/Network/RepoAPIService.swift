@@ -48,11 +48,14 @@ class RepoAPIService: NSObject, RepoRemoteDataManagerInputProtocol {
                     switch response.result {
                     case .success:
                         if let jsonData = response.data {
+                            
                             let jsonDecoder = JSONDecoder()
+                            jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+                            
                             do {
                                 let repo = try jsonDecoder.decode(Repositories.self, from: jsonData)
                                 completion(repo)
-                            } catch let error{
+                            } catch let error {
                                 print("Erro: \(error.localizedDescription)")
                                 completion(nil)
                                 return

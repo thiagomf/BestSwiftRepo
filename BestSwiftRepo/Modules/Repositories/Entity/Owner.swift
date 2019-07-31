@@ -9,13 +9,13 @@
 import Foundation
 
 // MARK: - Owner
-struct Owner: Codable {
+struct Owner: Decodable {
     
     let login: String
-    let avatarURL: String
+    let avatarUrl: String
     
-    enum CodingKeys: String, CodingKey {
-        case login
-        case avatarURL = "avatar_url"
-    }
+//    enum CodingKeys: String, CodingKey {
+//        case login
+//        case avatarURL = "avatar_url"
+//    }
 }

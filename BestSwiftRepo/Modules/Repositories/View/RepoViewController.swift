@@ -49,6 +49,7 @@ class RepoViewController: UIViewController {
         if #available(iOS 10.0, *) {
             
             repoTbv.refreshControl = refreshControl
+            
         } else {
             
             repoTbv.addSubview(refreshControl)

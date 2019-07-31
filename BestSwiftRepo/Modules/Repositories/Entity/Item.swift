@@ -9,17 +9,17 @@
 import Foundation
 
 // MARK: - Item
-struct Item: Codable {
+struct Item: Decodable {
     
     let name, fullName: String
     let owner: Owner
     let stargazersCount: Int
     
-    enum CodingKeys: String, CodingKey {
-        
-        case name
-        case fullName = "full_name"
-        case owner
-        case stargazersCount = "stargazers_count"
-    }
+//    enum CodingKeys: String, CodingKey {
+//        
+//        case name
+//        case fullName = "full_name"
+//        case owner
+//        case stargazersCount = "stargazers_count"
+//    }
 }
