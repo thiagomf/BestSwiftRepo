@@ -141,11 +141,19 @@ class RepoViewCell: UITableViewCell, CustomRepoElementCell {
         }
         
         self.model = model
-        let url = URL.init(string: self.model.item?.owner.avatarURL ?? "")
-        self.authorImage.kf.setImage(with: url)
+        
+        if let avatarUrl = self.model.item?.owner.avatarURL {
+            let url = URL.init(string: avatarUrl)
+            self.authorImage.kf.setImage(with: url)
+        }
+        
         self.repoName.text = self.model.item?.name
         self.authorName.text = self.model.item?.owner.login
-        self.countStars.text = "\(String(describing: self.model.item?.stargazersCount ?? 0))"
+        
+        if let count = self.model.item?.stargazersCount {
+            self.countStars.text = "\(count)"
+        }
+        
         setupAcessibility(self.model)
     }
     
