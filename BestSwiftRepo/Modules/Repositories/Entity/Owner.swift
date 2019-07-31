@@ -10,6 +10,7 @@ import Foundation
 
 // MARK: - Owner
 struct Owner: Codable {
+    
     let login: String
     let avatarURL: String
     

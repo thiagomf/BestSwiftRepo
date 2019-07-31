@@ -104,6 +104,7 @@ extension RepoViewController: UITableViewDataSource {
             customCell.configure(withModel: cellModel)
             
             return customCell as! UITableViewCell
+        
         } else {
             
             let cellModel = LoadElement.init()
