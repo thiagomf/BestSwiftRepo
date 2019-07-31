@@ -21,8 +21,15 @@ class BestSwiftRepoUITests: KIFTestCase {
     override func setUp() {
         super.setUp()
         
+        let app = XCUIApplication()
+
         KIFEnableAccessibility()
-        XCUIApplication().launch()
+        
+        setupSnapshot(app)
+
+        app.launch()
+        
+        snapshot("0Launch")
         
     }
 
@@ -32,8 +39,9 @@ class BestSwiftRepoUITests: KIFTestCase {
         
         //tentei fazer com KIF mas por algum motivo dá KIF fails to find accessibility labels talvez seja por causa da versão ios 12
         let tableviewrepoTable = XCUIApplication().tables["tableViewRepo"]
-        for _ in 1...40 {
+        for n in 1...2 {
             tableviewrepoTable.swipeUp()
+            snapshot("swipe\(n)")
         }
     }
 }

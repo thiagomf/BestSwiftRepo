@@ -16,6 +16,8 @@ class RepoViewControllerSpec: QuickSpec {
 
     class RepoPresenterMock: RepoPresenterProtocol {
         
+        var fetchingMore: Bool = false
+        
         var view: RepoViewProtocol?
         
         var interactor: RepoInteractorInputProtocol?
@@ -32,6 +34,10 @@ class RepoViewControllerSpec: QuickSpec {
         
         func pullToRefreshRepo() {
             callPull = true
+        }
+        
+        func scrollTableView(scrollView: UIScrollView) {
+            fetchingMore = true
         }
         
     }

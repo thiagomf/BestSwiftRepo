@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='BestSwiftRepoUITests.xctest' tests='9' failures='0'>
+  <testsuite name='BestSwiftRepoTests.RepoViewControllerSpec' tests='8' failures='0'>
+    <testcase classname='BestSwiftRepoTests.RepoViewControllerSpec' name='RepoView__load_repositorie_data__when_load_mock_json__should_have_25_repo_loaded' time='0.027'/>
+    <testcase classname='BestSwiftRepoTests.RepoViewControllerSpec' name='RepoView__load_repositorie_data__when_load_mock_json__should_record_tableview_with_best_repositories' time='0.157'/>
+    <testcase classname='BestSwiftRepoTests.RepoViewControllerSpec' name='RepoView__load_repositorie_data__when_load_mock_json__should_protocol_presenter_mock_is_true' time='0.009'/>
+    <testcase classname='BestSwiftRepoTests.RepoViewControllerSpec' name='RepoView__load_repositorie_data__show_message_of_fail_repositories__when_appear_mensage_of_error__show_alert_view___record_snapShot' time='0.038'/>
+    <testcase classname='BestSwiftRepoTests.RepoViewControllerSpec' name='RepoView__load_repositorie_data__RepoViewCell__should_show_repo_name_stars_and_author_name' time='0.015'/>
+    <testcase classname='BestSwiftRepoTests.RepoViewControllerSpec' name='RepoView__load_repositorie_data__RepoViewCell__should_record_RepoViewCell_row_0' time='0.032'/>
+    <testcase classname='BestSwiftRepoTests.RepoViewControllerSpec' name='RepoView__load_repositorie_data__LoadViewCell__should_show_start_activity_animation' time='0.014'/>
+    <testcase classname='BestSwiftRepoTests.RepoViewControllerSpec' name='RepoView__load_repositorie_data__LoadViewCell__should_record_LoadViewCell_row_0' time='0.020'/>
+  </testsuite>
+  <testsuite name='BestSwiftRepoUITests.BestSwiftRepoUITests' tests='1' failures='0'>
+    <testcase classname='BestSwiftRepoUITests.BestSwiftRepoUITests' name='testSwipe' time='17.653'/>
+  </testsuite>
+</testsuites>

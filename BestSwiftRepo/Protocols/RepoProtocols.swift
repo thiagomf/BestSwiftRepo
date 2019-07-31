@@ -43,7 +43,6 @@ protocol RepoPresenterProtocol: class {
     func callRepoItens()
     func pullToRefreshRepo()
     func scrollTableView(scrollView: UIScrollView)
-    
 }
 
 //MARK: Interactor -
@@ -52,7 +51,6 @@ protocol RepoInteractorOutputProtocol: class {
     /* Interactor -> Presenter */
     func sucessRepo(itensRepo: [Item])
     func failRepo()
-    
 }
 
 protocol RepoInteractorInputProtocol: class {
